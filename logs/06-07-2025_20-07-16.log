@@ -1,0 +1,7 @@
+2025-07-06 20:07:17,055 - 58 - root - INFO - Starting pushing data to MongoDB
+2025-07-06 20:07:17,057 - 21 - root - INFO - Connecting to MoongoDB
+2025-07-06 20:07:18,186 - 25 - root - INFO - Connected to MongoDB successfully
+2025-07-06 20:07:18,187 - 33 - root - INFO - Converting CSV to JSON
+2025-07-06 20:07:18,413 - 44 - root - INFO - Pushing data to MongoDB
+2025-07-06 20:07:28,181 - 49 - root - INFO - Data pushed to MongoDB successfully
+2025-07-06 20:07:28,181 - 63 - root - INFO - Data pushed successfully

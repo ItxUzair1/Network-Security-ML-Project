@@ -3,3 +3,7 @@ numpy
 scikit-learn
 matplotlib
 seaborn
+pymongo
+pymongo[srv]==3.6
+certifi
+dotenv
