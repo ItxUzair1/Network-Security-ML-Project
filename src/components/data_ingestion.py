@@ -38,6 +38,9 @@ class DataIngestion:
                 raise CustomException("No data found in the MongoDB collection", sys) # type: ignore
             df.reset_index(drop=True, inplace=True)
             df.replace({"na":np.nan}, inplace=True)
+            if "_id" in df.columns:
+                df.drop(columns=["_id"], inplace=True)
+                logging.info("Dropped '_id' column from dataframe")
             logging.info("Data fetched from MongoDB successfully")
             return df
         except Exception as e:
