@@ -1,0 +1,11 @@
+2025-07-07 11:46:24,321 - 11 - root - INFO - Starting Data Ingestion Pipeline...
+2025-07-07 11:46:24,321 - 20 - root - INFO - Loading Data Ingestion Configuration
+2025-07-07 11:46:24,321 - 31 - root - INFO - Fetching data from MongoDB
+2025-07-07 11:46:28,648 - 41 - root - INFO - Data fetched from MongoDB successfully
+2025-07-07 11:46:28,648 - 50 - root - INFO - Initiating data ingestion process
+2025-07-07 11:46:28,649 - 66 - root - INFO - Saving data into feature store
+2025-07-07 11:46:28,736 - 70 - root - INFO - Data saved into feature store at artifacts\feature_store\phishingData.csv
+2025-07-07 11:46:28,743 - 77 - root - INFO - Splitting data into train and test sets
+2025-07-07 11:46:28,847 - 89 - root - INFO - Train data saved at artifacts\ingested\train.csv
+2025-07-07 11:46:28,847 - 90 - root - INFO - Test data saved at artifacts\ingested\test.csv
+2025-07-07 11:46:28,858 - 15 - root - INFO - Data Ingestion Completed. Artifacts: DataIngestionArtifacts(training_data_path='artifacts\\ingested\\train.csv', test_data_path='artifacts\\ingested\\test.csv')
