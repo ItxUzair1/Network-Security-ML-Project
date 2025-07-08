@@ -1,9 +1,9 @@
 pandas
-numpy 
+numpy
 scikit-learn
 matplotlib
 seaborn
-pymongo
-pymongo[srv]==3.6
+pymongo[srv]>=3.12
 certifi
-dotenv
+python-dotenv
+pyyaml

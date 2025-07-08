@@ -15,3 +15,10 @@ class DataValidationArtifacts:
     drift_report_file_path:str
     validation_status:bool
     
+
+
+@dataclass
+class DataTransformationArtifacts:
+    preprocessor_obj_path: str
+    transformed_train_file_path: str
+    transformed_test_file_path: str

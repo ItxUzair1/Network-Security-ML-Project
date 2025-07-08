@@ -1,0 +1,58 @@
+2025-07-08 12:16:43,973 - 18 - root - INFO - \U0001f680 Starting Data Ingestion Pipeline...
+2025-07-08 12:16:43,973 - 20 - root - INFO - Loading Data Ingestion Configuration
+2025-07-08 12:16:43,973 - 31 - root - INFO - Fetching data from MongoDB
+2025-07-08 12:16:57,294 - 43 - root - INFO - Dropped '_id' column from dataframe
+2025-07-08 12:16:57,294 - 44 - root - INFO - Data fetched from MongoDB successfully
+2025-07-08 12:16:57,294 - 53 - root - INFO - Initiating data ingestion process
+2025-07-08 12:16:57,294 - 69 - root - INFO - Saving data into feature store
+2025-07-08 12:16:57,365 - 73 - root - INFO - Data saved into feature store at artifacts\data_ingestion\feature_store\phishingData.csv
+2025-07-08 12:16:57,366 - 80 - root - INFO - Splitting data into train and test sets
+2025-07-08 12:16:57,444 - 92 - root - INFO - Train data saved at artifacts\data_ingestion\ingested\train.csv
+2025-07-08 12:16:57,445 - 93 - root - INFO - Test data saved at artifacts\data_ingestion\ingested\test.csv
+2025-07-08 12:16:57,446 - 22 - root - INFO - \u2705 Data Ingestion Completed. Artifacts: DataIngestionArtifacts(training_data_path='artifacts\\data_ingestion\\ingested\\train.csv', test_data_path='artifacts\\data_ingestion\\ingested\\test.csv')
+2025-07-08 12:16:57,446 - 25 - root - INFO - \U0001f680 Starting Data Validation Pipeline...
+2025-07-08 12:16:57,446 - 17 - root - INFO - \U0001f4e5 Reading the schema from YAML file...
+2025-07-08 12:16:57,451 - 19 - root - INFO - \u2705 Schema successfully loaded.
+2025-07-08 12:16:57,451 - 31 - root - INFO - \U0001f680 Initiating data validation process...
+2025-07-08 12:16:57,451 - 36 - root - INFO - \U0001f4c4 Reading training data from: artifacts\data_ingestion\ingested\train.csv
+2025-07-08 12:16:57,481 - 38 - root - INFO - \U0001f4c4 Reading test data from: artifacts\data_ingestion\ingested\test.csv
+2025-07-08 12:16:57,518 - 125 - root - INFO - \u2705 Number of columns matched the schema.
+2025-07-08 12:16:57,519 - 125 - root - INFO - \u2705 Number of columns matched the schema.
+2025-07-08 12:16:57,519 - 141 - root - INFO - \u2705 All numerical columns are valid.
+2025-07-08 12:16:57,520 - 141 - root - INFO - \u2705 All numerical columns are valid.
+2025-07-08 12:16:57,520 - 65 - root - INFO - \u2705 Data validation passed.
+2025-07-08 12:16:57,520 - 151 - root - INFO - \U0001f50d Starting KS test for data drift detection...
+2025-07-08 12:16:57,522 - 166 - root - INFO - \U0001f4ca Column 'having_IP_Address': drift_detected=False, p_value=1.0000
+2025-07-08 12:16:57,525 - 166 - root - INFO - \U0001f4ca Column 'URL_Length': drift_detected=False, p_value=1.0000
+2025-07-08 12:16:57,526 - 166 - root - INFO - \U0001f4ca Column 'Shortining_Service': drift_detected=False, p_value=1.0000
+2025-07-08 12:16:57,528 - 166 - root - INFO - \U0001f4ca Column 'having_At_Symbol': drift_detected=False, p_value=1.0000
+2025-07-08 12:16:57,530 - 166 - root - INFO - \U0001f4ca Column 'double_slash_redirecting': drift_detected=False, p_value=1.0000
+2025-07-08 12:16:57,533 - 166 - root - INFO - \U0001f4ca Column 'Prefix_Suffix': drift_detected=False, p_value=0.9995
+2025-07-08 12:16:57,536 - 166 - root - INFO - \U0001f4ca Column 'having_Sub_Domain': drift_detected=False, p_value=1.0000
+2025-07-08 12:16:57,542 - 166 - root - INFO - \U0001f4ca Column 'SSLfinal_State': drift_detected=False, p_value=0.4599
+2025-07-08 12:16:57,547 - 166 - root - INFO - \U0001f4ca Column 'Domain_registeration_length': drift_detected=False, p_value=0.9959
+2025-07-08 12:16:57,550 - 166 - root - INFO - \U0001f4ca Column 'Favicon': drift_detected=False, p_value=1.0000
+2025-07-08 12:16:57,551 - 166 - root - INFO - \U0001f4ca Column 'port': drift_detected=False, p_value=1.0000
+2025-07-08 12:16:57,554 - 166 - root - INFO - \U0001f4ca Column 'HTTPS_token': drift_detected=False, p_value=1.0000
+2025-07-08 12:16:57,561 - 166 - root - INFO - \U0001f4ca Column 'Request_URL': drift_detected=False, p_value=0.2689
+2025-07-08 12:16:57,565 - 166 - root - INFO - \U0001f4ca Column 'URL_of_Anchor': drift_detected=False, p_value=0.9998
+2025-07-08 12:16:57,568 - 166 - root - INFO - \U0001f4ca Column 'Links_in_tags': drift_detected=False, p_value=0.9995
+2025-07-08 12:16:57,570 - 166 - root - INFO - \U0001f4ca Column 'SFH': drift_detected=False, p_value=1.0000
+2025-07-08 12:16:57,573 - 166 - root - INFO - \U0001f4ca Column 'Submitting_to_email': drift_detected=False, p_value=1.0000
+2025-07-08 12:16:57,574 - 166 - root - INFO - \U0001f4ca Column 'Abnormal_URL': drift_detected=False, p_value=1.0000
+2025-07-08 12:16:57,576 - 166 - root - INFO - \U0001f4ca Column 'Redirect': drift_detected=False, p_value=1.0000
+2025-07-08 12:16:57,578 - 166 - root - INFO - \U0001f4ca Column 'on_mouseover': drift_detected=False, p_value=1.0000
+2025-07-08 12:16:57,579 - 166 - root - INFO - \U0001f4ca Column 'RightClick': drift_detected=False, p_value=1.0000
+2025-07-08 12:16:57,581 - 166 - root - INFO - \U0001f4ca Column 'popUpWidnow': drift_detected=False, p_value=1.0000
+2025-07-08 12:16:57,582 - 166 - root - INFO - \U0001f4ca Column 'Iframe': drift_detected=False, p_value=1.0000
+2025-07-08 12:16:57,585 - 166 - root - INFO - \U0001f4ca Column 'age_of_domain': drift_detected=False, p_value=0.9915
+2025-07-08 12:16:57,587 - 166 - root - INFO - \U0001f4ca Column 'DNSRecord': drift_detected=False, p_value=1.0000
+2025-07-08 12:16:57,593 - 166 - root - INFO - \U0001f4ca Column 'web_traffic': drift_detected=False, p_value=0.5733
+2025-07-08 12:16:57,597 - 166 - root - INFO - \U0001f4ca Column 'Page_Rank': drift_detected=False, p_value=0.9876
+2025-07-08 12:16:57,600 - 166 - root - INFO - \U0001f4ca Column 'Google_Index': drift_detected=False, p_value=1.0000
+2025-07-08 12:16:57,603 - 166 - root - INFO - \U0001f4ca Column 'Links_pointing_to_page': drift_detected=False, p_value=0.9996
+2025-07-08 12:16:57,604 - 166 - root - INFO - \U0001f4ca Column 'Statistical_report': drift_detected=False, p_value=1.0000
+2025-07-08 12:16:57,608 - 166 - root - INFO - \U0001f4ca Column 'Result': drift_detected=False, p_value=0.9087
+2025-07-08 12:16:57,700 - 29 - root - INFO - \u2705 Data Validation Completed. Artifacts: DataValidationArtifacts(valid_train_path='artifacts\\data_validation\\valid\\train.csv', valid_test_path='artifacts\\data_validation\\valid\\test.csv', invalid_train_path=None, invalid_test_path=None, drift_report_file_path='artifacts\\data_validation\\drift_report\\drift_report.yaml', validation_status=True)
+2025-07-08 12:16:57,700 - 32 - root - INFO - \U0001f680 Starting Data Transformation Pipeline...
+2025-07-08 12:16:57,791 - 36 - root - INFO - \u2705 Data Transformation Completed. Artifacts: DataTransformationArtifacts(preprocessor_obj_path='artifacts\\data_transformation\\transformed_object\\preprocessor.pkl', transformed_train_file_path='artifacts\\data_transformation\\transformed\\train.npy', transformed_test_file_path='artifacts\\data_transformation\\transformed\\test.npy')

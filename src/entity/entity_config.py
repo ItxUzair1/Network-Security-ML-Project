@@ -30,3 +30,13 @@ class DataValidationConfig():
         self.drift_report_dir=os.path.join(self.data_validation_dir,constant.DATA_VALIDATION_DRIFT_REPORT_DIR)
         self.drift_report_file_path=os.path.join(self.drift_report_dir,constant.DATA_VALIDATION_DRIFT_REPORT_FILE_NAME)
 
+
+class DataTransformationConfig():
+    def __init__(self):
+        self.data_transformation_dir=os.path.join(constant.ARTIFACTS_DIR,constant.DATA_TRANSFORMATION_DIR)
+        self.transforemd_train_file_path=os.path.join(self.data_transformation_dir,constant.DATA_TRANSFORMATION_TRANSFORMED_DIR,constant.DATA_TRANSFORMATION_TRAIN_FILE_NAME)
+        self.transforemd_test_file_path=os.path.join(self.data_transformation_dir,constant.DATA_TRANSFORMATION_TRANSFORMED_DIR,constant.DATA_TRANSFORMATION_TEST_FILE_NAME)
+        self.preprocessor_obj_path=os.path.join(self.data_transformation_dir,constant.DATA_TRANSFORMATION_PREPROCESSOR_OBJ_DIR,constant.DATA_TRANSFORMATION_PREPROCESSOR_OBJ_NAME)
+        
+
+
