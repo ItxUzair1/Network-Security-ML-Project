@@ -9,7 +9,7 @@ from src.entity.entity_config import DataTransformationConfig
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.impute import KNNImputer
 from sklearn.pipeline import Pipeline
-from src.utils.utils import save_nparray, save_object
+from src.utils.main_utils import save_nparray, save_object
 from src.constant.constant import TARGET_COLUMN
 
 
@@ -49,8 +49,8 @@ class DataTransformation:
             test_arr = np.c_[transformed_test_input, np.array(test_target)]
 
             logging.info("Saving transformed training and testing arrays.")
-            save_nparray(self.data_transformation_config.transforemd_train_file_path, array=train_arr)
-            save_nparray(self.data_transformation_config.transforemd_test_file_path, array=test_arr)
+            save_nparray(self.data_transformation_config.transformed_train_file_path, array=train_arr)
+            save_nparray(self.data_transformation_config.transformed_test_file_path, array=test_arr)
 
             logging.info("Saving preprocessor object.")
             save_object(self.data_transformation_config.preprocessor_obj_path, obj=preprocessor)
@@ -58,8 +58,8 @@ class DataTransformation:
             logging.info("Data transformation completed successfully.")
             return DataTransformationArtifacts(
                 preprocessor_obj_path=self.data_transformation_config.preprocessor_obj_path,
-                transformed_train_file_path=self.data_transformation_config.transforemd_train_file_path,
-                transformed_test_file_path=self.data_transformation_config.transforemd_test_file_path
+                transformed_train_file_path=self.data_transformation_config.transformed_train_file_path,
+                transformed_test_file_path=self.data_transformation_config.transformed_test_file_path
             )
 
         except Exception as e:

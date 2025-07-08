@@ -15,7 +15,6 @@ TRAIN_FILE_NAME="train.csv"
 TEST_FILE_NAME="test.csv"
 RAW_DATA_FILE_NAME="phishingData.csv"
 TRAIN_TEST_SPLIT_RATIO = 0.2
-TRAINED_MODEL="trained_model.pkl"
 SCHEMA_FILE_PATH=os.path.join("schema", "schema.yaml")
 
 DATABASE_NAME = "Network-Security-ML"
@@ -23,6 +22,10 @@ COLLECTION_NAME = "Network-Security-ML"
 FEATURE_STORE_NAME = "feature_store"
 INGESTED_NAME = "ingested"
 TRAINED_MODEL_DIR="models"
+TRAINED_MODEL_NAME="model.pkl"
+EXPECTED_ACCURACY=0.6
+MODEL_TRAINED_UNDERFITTING_OVERFITTING=0.05
+
 
 
 

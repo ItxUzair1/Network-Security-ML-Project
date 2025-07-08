@@ -5,7 +5,7 @@ import pandas as pd
 import sys
 from src.constant.constant import SCHEMA_FILE_PATH
 from src.entity.artifacts_config import DataIngestionArtifacts, DataValidationArtifacts
-from src.utils.utils import read_schema,write_yaml_file
+from src.utils.main_utils import read_schema,write_yaml_file
 from scipy.stats import ks_2samp
 import os
 

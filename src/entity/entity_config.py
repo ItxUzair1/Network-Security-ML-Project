@@ -34,9 +34,15 @@ class DataValidationConfig():
 class DataTransformationConfig():
     def __init__(self):
         self.data_transformation_dir=os.path.join(constant.ARTIFACTS_DIR,constant.DATA_TRANSFORMATION_DIR)
-        self.transforemd_train_file_path=os.path.join(self.data_transformation_dir,constant.DATA_TRANSFORMATION_TRANSFORMED_DIR,constant.DATA_TRANSFORMATION_TRAIN_FILE_NAME)
-        self.transforemd_test_file_path=os.path.join(self.data_transformation_dir,constant.DATA_TRANSFORMATION_TRANSFORMED_DIR,constant.DATA_TRANSFORMATION_TEST_FILE_NAME)
+        self.transformed_train_file_path=os.path.join(self.data_transformation_dir,constant.DATA_TRANSFORMATION_TRANSFORMED_DIR,constant.DATA_TRANSFORMATION_TRAIN_FILE_NAME)
+        self.transformed_test_file_path=os.path.join(self.data_transformation_dir,constant.DATA_TRANSFORMATION_TRANSFORMED_DIR,constant.DATA_TRANSFORMATION_TEST_FILE_NAME)
         self.preprocessor_obj_path=os.path.join(self.data_transformation_dir,constant.DATA_TRANSFORMATION_PREPROCESSOR_OBJ_DIR,constant.DATA_TRANSFORMATION_PREPROCESSOR_OBJ_NAME)
         
 
+class ModelTrainConfig():
+    def __init__(self):
+        self.trained_model_dir=constant.TRAINED_MODEL_DIR
+        self.train_model_path=os.path.join(self.trained_model_dir,constant.TRAINED_MODEL_NAME)
+        self.expected_accuracy=constant.EXPECTED_ACCURACY
+        self.model_underfitting_overfitting=constant.MODEL_TRAINED_UNDERFITTING_OVERFITTING
 
