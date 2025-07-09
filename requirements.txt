@@ -8,3 +8,6 @@ certifi
 python-dotenv
 pyyaml
 xgboost
+gunicorn
+Flask
+pickle
