@@ -1,0 +1,9 @@
+2025-07-09 11:21:40,025 - 97 - werkzeug - WARNING -  * Debugger is active!
+2025-07-09 11:21:40,028 - 97 - werkzeug - INFO -  * Debugger PIN: 288-914-405
+2025-07-09 11:21:43,389 - 97 - werkzeug - INFO - 127.0.0.1 - - [09/Jul/2025 11:21:43] "GET / HTTP/1.1" 200 -
+2025-07-09 11:21:46,058 - 79 - root - INFO - Successfully loaded pickle object from models/model.pkl
+2025-07-09 11:21:46,061 - 79 - root - INFO - Successfully loaded pickle object from models/preprocessor.pkl
+2025-07-09 11:21:46,063 - 97 - werkzeug - INFO - 127.0.0.1 - - [09/Jul/2025 11:21:46] "POST /predict HTTP/1.1" 200 -
+2025-07-09 11:22:29,519 - 97 - werkzeug - INFO -  * Detected change in 'C:\\Users\\Sk\\Desktop\\Ml-Course\\NetworkSecurity\\app.py', reloading
+2025-07-09 11:22:29,520 - 97 - werkzeug - INFO -  * Detected change in 'C:\\Users\\Sk\\Desktop\\Ml-Course\\NetworkSecurity\\app.py', reloading
+2025-07-09 11:22:29,527 - 97 - werkzeug - INFO -  * Detected change in 'C:\\Users\\Sk\\Desktop\\Ml-Course\\NetworkSecurity\\app.py', reloading

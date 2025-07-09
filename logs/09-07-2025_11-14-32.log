@@ -1,0 +1,13 @@
+2025-07-09 11:14:33,908 - 97 - werkzeug - WARNING -  * Debugger is active!
+2025-07-09 11:14:33,921 - 97 - werkzeug - INFO -  * Debugger PIN: 288-914-405
+2025-07-09 11:14:41,416 - 97 - werkzeug - INFO - 127.0.0.1 - - [09/Jul/2025 11:14:41] "GET / HTTP/1.1" 200 -
+2025-07-09 11:14:41,798 - 97 - werkzeug - INFO - 127.0.0.1 - - [09/Jul/2025 11:14:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-09 11:16:28,431 - 79 - root - INFO - Successfully loaded pickle object from models/model.pkl
+2025-07-09 11:16:28,452 - 79 - root - INFO - Successfully loaded pickle object from models/preprocessor.pkl
+2025-07-09 11:16:28,474 - 97 - werkzeug - INFO - 127.0.0.1 - - [09/Jul/2025 11:16:28] "POST /predict HTTP/1.1" 200 -
+2025-07-09 11:18:52,096 - 97 - werkzeug - INFO - 127.0.0.1 - - [09/Jul/2025 11:18:52] "GET / HTTP/1.1" 200 -
+2025-07-09 11:18:56,481 - 79 - root - INFO - Successfully loaded pickle object from models/model.pkl
+2025-07-09 11:18:56,483 - 79 - root - INFO - Successfully loaded pickle object from models/preprocessor.pkl
+2025-07-09 11:18:56,485 - 97 - werkzeug - INFO - 127.0.0.1 - - [09/Jul/2025 11:18:56] "POST /predict HTTP/1.1" 200 -
+2025-07-09 11:19:55,817 - 97 - werkzeug - INFO -  * Detected change in 'C:\\Users\\Sk\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\certifi\\__init__.py', reloading
+2025-07-09 11:19:55,844 - 97 - werkzeug - INFO -  * Detected change in 'C:\\Users\\Sk\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\dataclasses.py', reloading

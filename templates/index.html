@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Phishing Website Prediction</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-100 to-purple-200 min-h-screen flex items-center justify-center">
+  <div class="bg-white p-10 rounded-xl shadow-lg w-full max-w-5xl">
+    <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">Phishing Website Prediction Form</h1>
+
+    <form action="/predict" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6 max-h-[80vh] overflow-y-auto pr-2">
+      <!-- Generate input for all 30 features -->
+      {% set options = {
+        'binary': {'1': 'No (Legitimate)', '-1': 'Yes (Suspicious)'},
+        'ternary': {'1': 'Safe', '0': 'Suspicious', '-1': 'Dangerous'},
+        'short_medium_long': {'1': 'Short', '0': 'Medium', '-1': 'Long'},
+        'domain_age': {'1': 'More than 6 months', '-1': '6 months or less'},
+        'register_length': {'1': 'More than 1 year', '-1': '1 year or less'},
+        'page_rank': {'1': 'High', '-1': 'Low'},
+        'indexed': {'1': 'Indexed by Google', '-1': 'Not Indexed'},
+        'traffic': {'1': 'High', '0': 'Medium', '-1': 'Low'},
+        'links_pointing': {'1': 'Many', '0': 'Few', '-1': 'None'}
+      } %}
+
+      {% set fields = [
+        ("having_IP_Address", "Has IP Address in URL?", "binary"),
+        ("URL_Length", "URL Length", "short_medium_long"),
+        ("Shortining_Service", "Using URL Shortening Service?", "binary"),
+        ("having_At_Symbol", "Contains '@' Symbol?", "binary"),
+        ("double_slash_redirecting", "Double Slash Redirecting?", "binary"),
+        ("Prefix_Suffix", "Prefix or Suffix with Dash in Domain?", "binary"),
+        ("having_Sub_Domain", "Number of Subdomains?", "ternary"),
+        ("SSLfinal_State", "SSL Certificate Validity", "ternary"),
+        ("Domain_registeration_length", "Domain Registration Length", "register_length"),
+        ("Favicon", "Favicon from External Domain?", "binary"),
+        ("port", "Uses Non-standard Port?", "binary"),
+        ("HTTPS_token", "'HTTPS' in URL Not Valid?", "binary"),
+        ("Request_URL", "Request Resources from Same Domain?", "ternary"),
+        ("URL_of_Anchor", "Anchor Tags Point to Same Domain?", "ternary"),
+        ("Links_in_tags", "Links in Meta/Script/Link Tags?", "ternary"),
+        ("SFH", "Form Handler (SFH)?", "ternary"),
+        ("Submitting_to_email", "Submitting Form to Email?", "binary"),
+        ("Abnormal_URL", "Abnormal URL?", "binary"),
+        ("Redirect", "Number of Redirects?", "ternary"),
+        ("on_mouseover", "Mouseover Hides Status Bar?", "binary"),
+        ("RightClick", "Right Click Disabled?", "binary"),
+        ("popUpWidnow", "Pop-up Window on Load?", "binary"),
+        ("Iframe", "Invisible IFrame Present?", "binary"),
+        ("age_of_domain", "Domain Age", "domain_age"),
+        ("DNSRecord", "Has DNS Record?", "binary"),
+        ("web_traffic", "Web Traffic Level", "traffic"),
+        ("Page_Rank", "Page Rank", "page_rank"),
+        ("Google_Index", "Google Indexed?", "indexed"),
+        ("Links_pointing_to_page", "External Links Pointing to Page", "links_pointing"),
+        ("Statistical_report", "Listed in Blacklists?", "binary")
+      ] %}
+
+      {% for field, label, type in fields %}
+      <div>
+        <label for="{{ field }}" class="block text-sm font-medium text-gray-700">{{ label }}</label>
+        <select name="{{ field }}" id="{{ field }}" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+          {% for value, text in options[type].items() %}
+            <option value="{{ value }}">{{ text }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      {% endfor %}
+
+      <div class="md:col-span-2 flex justify-center">
+        <button type="submit"
+                class="mt-6 px-8 py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition">
+          Predict
+        </button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

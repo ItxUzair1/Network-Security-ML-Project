@@ -127,7 +127,8 @@ class ModelTrain():
 
         logging.info("Creating and saving NetworkModel object.")
         network_obj = NetworkModel(preprocessor, model)
-        save_object(self.model_train_config.train_model_path, network_obj)
+        save_object(self.model_train_config.train_model_path, model)
+        save_object("models/preprocessor.pkl",preprocessor)
 
         logging.info("Model and preprocessing pipeline saved successfully.")
         return ModelTrainArtifacts(

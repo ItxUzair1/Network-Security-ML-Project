@@ -1,0 +1,14 @@
+2025-07-08 17:52:58,687 - 97 - werkzeug - WARNING -  * Debugger is active!
+2025-07-08 17:52:58,698 - 97 - werkzeug - INFO -  * Debugger PIN: 288-914-405
+2025-07-08 17:53:14,717 - 97 - werkzeug - INFO - 127.0.0.1 - - [08/Jul/2025 17:53:14] "GET / HTTP/1.1" 200 -
+2025-07-08 17:53:14,782 - 97 - werkzeug - INFO - 127.0.0.1 - - [08/Jul/2025 17:53:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-08 17:53:21,396 - 16 - root - INFO - Received request to start training pipeline.
+2025-07-08 17:53:21,396 - 20 - root - INFO - Training pipeline started.
+2025-07-08 17:53:21,396 - 23 - root - INFO - Step 1: Data Ingestion
+2025-07-08 17:53:21,397 - 20 - root - INFO - Loading Data Ingestion Configuration
+2025-07-08 17:53:21,397 - 31 - root - INFO - Fetching data from MongoDB
+2025-07-08 17:53:21,435 - 97 - werkzeug - INFO -  * Detected change in 'C:\\Users\\Sk\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\werkzeug\\debug\\__init__.py', reloading
+2025-07-08 17:53:21,455 - 97 - werkzeug - INFO -  * Detected change in 'C:\\Users\\Sk\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\werkzeug\\serving.py', reloading
+2025-07-08 17:53:21,537 - 97 - werkzeug - INFO -  * Detected change in 'C:\\Users\\Sk\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\http\\server.py', reloading
+2025-07-08 17:53:21,553 - 97 - werkzeug - INFO -  * Detected change in 'C:\\Users\\Sk\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\socketserver.py', reloading
+2025-07-08 17:53:21,569 - 97 - werkzeug - INFO -  * Detected change in 'C:\\Users\\Sk\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\threading.py', reloading
